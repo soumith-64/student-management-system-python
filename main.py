@@ -168,6 +168,28 @@ def add_students():
 
         if saved:
             break
+# a function to display std details
+def display_std(rollnum, name, age, dept, pymark, mathmark, engmark, total, avg, grade, status):
+    print("\n")
+    print("════════════════════════════════════════════════════════════════")
+    print("                        STUDENTS DETAILS                        ")
+    print("════════════════════════════════════════════════════════════════\n")
+    print(f"Roll Number : {rollnum}\n")
+    print(f"Name : {name}\n")            
+    print(f"Age : {age}\n")                        
+    print(f"Department : {dept}\n")                        
+                                
+    print(f"Python Marks : {pymark}\n")                        
+    print(f"Math Marks   : {mathmark}\n")                        
+    print(f"English Marks: {engmark}\n")                        
+                                
+    print("________________________________________________________________\n")              
+
+    print(f"Total : {total}\n")                        
+    print(f"Average : {avg}\n")                        
+    print(f"Grade : {grade}\n")                        
+    print(f"Status : {status}\n")                                                                       
+    print("════════════════════════════════════════════════════════════════ \n")
 
 #here now i am creating a student view function
 def view_students():
@@ -187,27 +209,7 @@ def view_students():
                      pymark, mathmark, engmark,
                      total, avg, grade, status
                     ) = dtls
-                    print("\n")
-                    print("════════════════════════════════════════════════════════════════")
-                    print("                        STUDENTS DETAILS                        ")
-                    print("════════════════════════════════════════════════════════════════\n")
-                    print(f"Student #{i} \n")
-                    print(f"Roll Number : {rollnum}\n")
-                    print(f"Name : {name}\n")            
-                    print(f"Age : {age}\n")                        
-                    print(f"Department : {dept}\n")                        
-                            
-                    print(f"Python Marks : {pymark}\n")                        
-                    print(f"Math Marks   : {mathmark}\n")                        
-                    print(f"English Marks: {engmark}\n")                        
-                            
-                    print("________________________________________________________________\n")              
-
-                    print(f"Total : {total}\n")                        
-                    print(f"Average : {avg}\n")                        
-                    print(f"Grade : {grade}\n")                        
-                    print(f"Status : {status}\n")                                                                       
-                    print("════════════════════════════════════════════════════════════════ \n")
+                    display_std(rollnum, name, age, dept,pymark, mathmark, engmark, total, avg, grade, status)              
                     i+=1
                     sleep(1)
                 print("")
@@ -239,7 +241,54 @@ def view_students():
 
 
 def search_students():
-    print("Comming soon")
+    print("Student Search Dashboard\n")
+    try:
+        roll_num=int(input("Enter the roll number of the student :"))
+    except ValueError:
+        print("Enter a vaild number only\n")
+        print("Enter again")
+        sleep(1.2)
+
+    if os.path.exists("student.txt"):
+        with open("student.txt","r") as search_std:
+            search_std.seek(0)
+            #getting all line in the txt doc into a list for easy calculation
+            lines=search_std.readlines()
+            #storing line in list
+            valid_line=[line.strip() for line in lines if line.strip()]
+            #checking if the file has some data or not
+            if valid_line:
+                found=False
+                for std_data in valid_line:
+                    dts=std_data.strip().split("|")
+                    if len(dts) == 11:
+                        (
+                            rollnum, name, age, dept,
+                            pymark, mathmark, engmark,
+                            total, avg, grade, status
+                        ) = dts
+                    else:
+                        print("Skipping the data row...")
+                    if int(rollnum) == roll_num:
+                            display_std(rollnum, name, age, dept, pymark, mathmark, engmark, total, avg, grade, status)
+                            found=True
+                            break
+                    
+                if not found:
+                    print("")
+                    print(f"Sorry no student found with this roll number {roll_num}")
+            else:
+                print("Sorry there is no data to fetch... \n")
+                sleep(.7)
+                print("Try adding some data and try again\n")
+                sleep(.7)
+                print("Back to main menu\n")
+                sleep(.7)
+                print("Rerdirecting............\n")
+                sleep(1.3)
+
+
+
 def delete_students():
     print("Comming soon")
 
