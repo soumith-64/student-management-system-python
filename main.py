@@ -169,8 +169,75 @@ def add_students():
         if saved:
             break
 
+#here now i am creating a student view function
 def view_students():
-    print("Comming soon")
+    if os.path.exists("student.txt"):
+        #reading the file and extracting the datas
+        with open("student.txt","r") as read_std:
+            read_std.seek(0)
+            lines=read_std.readlines()
+            valid_line=[lin.strip() for lin in lines if lin.strip()]
+            if valid_line:
+                i=1
+                for line in valid_line:
+                
+                    dtls=list(line.strip().split("|"))
+                    (
+                     rollnum, name, age, dept,
+                     pymark, mathmark, engmark,
+                     total, avg, grade, status
+                    ) = dtls
+                    print("\n")
+                    print("════════════════════════════════════════════════════════════════")
+                    print("                        STUDENTS DETAILS                        ")
+                    print("════════════════════════════════════════════════════════════════\n")
+                    print(f"Student #{i} \n")
+                    print(f"Roll Number : {rollnum}\n")
+                    print(f"Name : {name}\n")            
+                    print(f"Age : {age}\n")                        
+                    print(f"Department : {dept}\n")                        
+                            
+                    print(f"Python Marks : {pymark}\n")                        
+                    print(f"Math Marks   : {mathmark}\n")                        
+                    print(f"English Marks: {engmark}\n")                        
+                            
+                    print("________________________________________________________________\n")              
+
+                    print(f"Total : {total}\n")                        
+                    print(f"Average : {avg}\n")                        
+                    print(f"Grade : {grade}\n")                        
+                    print(f"Status : {status}\n")                                                                       
+                    print("════════════════════════════════════════════════════════════════ \n")
+                    i+=1
+                    sleep(1)
+                print("")
+                print("All students data displayed \n")
+                sleep(.7)
+                print("Back to menu\n")
+                sleep(.7)
+                print("Redirecting........\n")
+                sleep(2)
+            else:
+                    print("Sorry there is no data to fetch... \n")
+                    sleep(.7)
+                    print("Try adding some data and try again\n")
+                    sleep(.7)
+                    print("Back to main menu\n")
+                    sleep(.7)
+                    print("Rerdirecting............\n")
+        sleep(1.3)
+    else:
+        print("Sorry there is no data to fetch... \n")
+        sleep(.7)
+        print("Try adding some data and try again\n")
+        sleep(.7)
+        print("Back to main menu\n")
+        sleep(.7)
+        print("Rerdirecting............\n")
+        sleep(1.3)
+
+
+
 def search_students():
     print("Comming soon")
 def delete_students():
