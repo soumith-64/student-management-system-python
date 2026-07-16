@@ -130,7 +130,6 @@ def save_student(roll_num,name,age,dept,py_mark,math_mark,eng_mark,total_mark,av
 
     with open("student.txt","a+") as stdinp:
             f=0
-            stdinp.seek(0)
             for i in stdinp:
 
                 if not i.strip():
@@ -203,7 +202,6 @@ def view_students():
     if os.path.exists("student.txt"):
         #reading the file and extracting the datas
         with open("student.txt","r") as read_std:
-            read_std.seek(0)
             lines=read_std.readlines()
             valid_line=[lin.strip() for lin in lines if lin.strip()]
             if valid_line:
@@ -259,7 +257,6 @@ def search_students():
 
     if os.path.exists("student.txt"):
         with open("student.txt","r") as search_std:
-            search_std.seek(0)
             #getting all line in the txt doc into a list for easy calculation
             lines=search_std.readlines()
             #storing line in list
@@ -303,15 +300,15 @@ def update_inp(data):
     print()
     print("To update value type else prese enter\n")
     try:
-        rollnum = data[0]
+        rollnum = int(data[0])
         name = input(f"Original value is {data[1]} :: Type new value if needed : ").strip() or data[1]
-        age = int(v) if (v := input(f"Original value is {data[2]} :: Type new value if needed : ").strip()) else data[2]
+        age = int(v) if (v := input(f"Original value is {data[2]} :: Type new value if needed : ").strip()) else int(data[2])
         dept = input(f"Original value is {data[3]} :: Type new value if needed : ").strip() or data[3]
-        pymark = int(v) if (v := input(f"Original value is {data[4]} :: Type new value if needed : ").strip()) else data[4]
-        mathmark = int(v) if (v := input(f"Original value is {data[5]} :: Type new value if needed : ").strip()) else data[5]
-        engmark = int(v) if (v := input(f"Original value is {data[6]} :: Type new value if needed : ").strip()) else data[6]
+        pymark = float(v) if (v := input(f"Original value is {data[4]} :: Type new value if needed : ").strip()) else float(data[4])
+        mathmark = float(v) if (v := input(f"Original value is {data[5]} :: Type new value if needed : ").strip()) else float(data[5])
+        engmark = float(v) if (v := input(f"Original value is {data[6]} :: Type new value if needed : ").strip()) else float(data[6])
         total=calculate_total(pymark, mathmark, engmark)
-        avg=calculate_average(int(total))
+        avg=calculate_average(total)
         new_data = [
             str(rollnum), str(name), str(age), str(dept), 
             str(pymark), str(mathmark), str(engmark), 
@@ -319,10 +316,11 @@ def update_inp(data):
         ]  
     except ValueError:
         print("Age and marks must be numeric. Update cancelled.")
-        return
+        return 
     return new_data
 
 def update_students():
+    datas=None
     try:
         rollnum=int(input("Enter the roll number : "))
     except ValueError:
@@ -335,7 +333,7 @@ def update_students():
         print("Data file 'student.txt' not found. 😔")
         return
     with open("student.txt","r") as val_std:
-        f=False
+        student_found=False
         lines=val_std.readlines()
         updated_line=[]
         for line in lines:
@@ -346,16 +344,21 @@ def update_students():
             data=line.strip().split("|")
             if int(data[0])==rollnum:
                 datas=update_inp(data)
+                if datas is None:
+                    print("Update cancelled")
+                    return
+                
                 updated_line.append("|".join(datas)+"\n")
-                f=True
+                student_found=True
             else:
                 updated_line.append(line)
-    if f:
+    if student_found:
         with open("student.txt","w") as updt_std:
             for value in updated_line:
                 updt_std.write(value)
         print()
         print("Value updated sucessfully 👍")
+        display_std(*datas)
     else:
         print("Sorry no data 😔")
      
