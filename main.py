@@ -2,7 +2,7 @@ import random
 from time import sleep
 import os
 def display_menu():
-    opt=[1,2,3,4,5,6]
+    opt={1,2,3,4,5,6}
     choice=0
     while True:
         print()
@@ -223,7 +223,7 @@ def view_students():
                 print("Back to menu\n")
                 sleep(.7)
                 print("Redirecting........\n")
-                sleep(2)
+                sleep(1.3)
             else:
                     print("Sorry there is no data to fetch... \n")
                     sleep(.7)
@@ -364,6 +364,52 @@ def update_students():
      
 
 def delete_students():
-    print("Comming soon 😶")
+    opt={'y','n'}
+    print("Students Deleting Window \n")
+    update_value=[]
+    student_search_result = search_students()
+    
+    if student_search_result is None:
+        return  
+    rollnum, name, age, dept, pymark, mathmark, engmark, total, avg, grade, status = student_search_result
+    print("Displaying Student Detail befor deleting ")
+    display_std(rollnum, name, age, dept, pymark, mathmark, engmark, total, avg, grade, status)
+    confirmation = input("If yes press y or n : ").lower()
+    if confirmation not in opt:
+        print("Please enter a correct option , Back to main menu")
+        return
+    else:
+        if confirmation == 'n':
+            print("Ok, Redirecting back to main menu")
+            return
+        else:
+            if os.path.exists("student.txt") :
+                with open("student.txt","r") as dlt_std:
+                    data=None
+                    lines=dlt_std.readlines()
+                    delete=False
 
+                    for line in lines:
+
+                        clean_line = line.strip()
+                        if not clean_line:
+                            continue
+
+                        data=clean_line.strip().split("|")
+                        if int(data[0])== int(rollnum):
+                            delete=True
+                        else:
+                            update_value.append(clean_line)
+                if delete:
+                    with open("student.txt","w") as updt_info:
+                        
+                        for val in update_value:
+                            updt_info.write(val+"\n")
+                        print("Student deleted 👍")
+                        print("Redirecting..........")
+                        sleep(1.2)
+                else:
+                    print("Delete Window Closed, Try again ")
+
+                    
 display_menu()
