@@ -2,9 +2,19 @@
 
 # 🎓 Student Management System
 
-### A Complete CRUD-Based Student Management System Built with Python
+### 🚀 A Complete CRUD-Based Student Management System Built with Python
 
-<p>
+<p align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=0:4F46E5,100:06B6D4&text=Student%20Management%20System&fontColor=ffffff&fontSize=40&animation=fadeIn&fontAlignY=38&desc=Python%20CRUD%20Project&descAlignY=58"/>
+</p>
+
+<p align="center">
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=23&duration=3000&pause=1000&color=36BCF7&center=true&vCenter=true&width=650&lines=Python+CRUD+Application;File+Handling;Student+Management+System;Learning+Software+Engineering;Built+by+Soumith+J.V."/>
+
+</p>
+
+<p align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
 ![Version](https://img.shields.io/badge/Version-v1.0-success?style=for-the-badge)
@@ -13,19 +23,19 @@
 
 </p>
 
-A beginner-friendly project that demonstrates **Python File Handling**, **CRUD Operations**, **Input Validation**, **Defensive Programming**, and **Git Version Control**.
+**A command-line Student Management System demonstrating Python File Handling, CRUD Operations, Modular Programming, Defensive Programming, and Git version control.**
 
-⭐ If you like this project, don't forget to star the repository.
+⭐ **If you like this project, consider giving it a star!**
 
 </div>
 
 ---
 
-# 📖 Table of Contents
+# 📑 Table of Contents
 
 - About
 - Features
-- Project Preview
+- Screenshots
 - Technologies Used
 - Project Structure
 - Installation
@@ -40,22 +50,24 @@ A beginner-friendly project that demonstrates **Python File Handling**, **CRUD O
 
 ---
 
-# 📚 About
+# 📖 About
 
 This project is a **Command-Line Student Management System** developed entirely in **Python**.
 
-Instead of using a database, the application stores records inside a text file (`student.txt`) using Python File Handling.
+Instead of using SQL databases, this version stores all student records inside a text file (`student.txt`).
 
-The purpose of this project was to strengthen programming fundamentals before moving to SQL databases and GUI development.
+The objective of this project was to strengthen programming fundamentals before moving to database-driven applications.
 
-This project follows good programming practices including:
+### This project demonstrates
 
-- Modular Programming
-- Code Reusability
-- Input Validation
-- Exception Handling
-- Defensive Programming
-- Git Version Control
+- ✅ CRUD Operations
+- ✅ File Handling
+- ✅ Modular Programming
+- ✅ Functions
+- ✅ Exception Handling
+- ✅ Input Validation
+- ✅ Defensive Programming
+- ✅ Git & GitHub Workflow
 
 ---
 
@@ -64,7 +76,7 @@ This project follows good programming practices including:
 ## 👨‍🎓 Student Management
 
 - ➕ Add Student
-- 📄 View All Students
+- 📄 View Students
 - 🔍 Search Student
 - ✏️ Update Student
 - 🗑 Delete Student
@@ -82,19 +94,18 @@ The application automatically calculates:
 
 ---
 
-## 🛡 Validation Features
+## 🛡 Validation
 
 - Duplicate Roll Number Detection
-- Marks Validation
 - Numeric Input Validation
-- Invalid Menu Handling
+- Invalid Menu Validation
 - Delete Confirmation
-- Safe File Rewrite
 - Exception Handling
+- Safe File Rewriting
 
 ---
 
-## 💾 File Handling Operations
+## 💾 File Handling
 
 - Read Records
 - Write Records
@@ -104,73 +115,49 @@ The application automatically calculates:
 
 ---
 
-# 📸 Project Preview
+# 📸 Screenshots
 
-## Main Menu
+## 🏠 Main Menu
 
-```text
-========================================
-
-        Student Management System
-
-========================================
-
-1. Add Student
-
-2. View Students
-
-3. Search Student
-
-4. Update Student
-
-5. Delete Student
-
-6. Exit
-
-========================================
-```
+![Main Menu](screenshots/menu.png)
 
 ---
 
-## Student Information
+## ➕ Add Student
 
-```text
-----------------------------------------
+![Add Student](screenshots/add_student.png)
 
-Roll Number : 101
+---
 
-Name        : Soumith
+## 🔍 Search Student
 
-Age         : 18
+![Search Student](screenshots/search_student.png)
 
-Department  : CSE
+---
 
-Python      : 95
+## ✏️ Update Student
 
-Math        : 91
+![Update Student](screenshots/update_student.png)
 
-English     : 89
+---
 
-----------------------------------------
+## 🗑 Delete Student
 
-Total       : 275
-
-Average     : 91.67
-
-Grade       : A+
-
-Status      : PASS
-
-----------------------------------------
-```
+![Delete Student](screenshots/delete_student.png)
 
 ---
 
 # 🛠 Technologies Used
 
+<p align="center">
+
+<img src="https://skillicons.dev/icons?i=python,git,github,vscode"/>
+
+</p>
+
 | Technology | Purpose |
 |------------|---------|
-| Python 3 | Programming Language |
+| Python | Programming Language |
 | File Handling | Data Storage |
 | Git | Version Control |
 | GitHub | Repository Hosting |
@@ -183,11 +170,19 @@ Status      : PASS
 student-management-system-python/
 
 │
-
+├── screenshots/
+│   ├── menu.png
+│   ├── add_student.png
+│   ├── search_student.png
+│   ├── update_student.png
+│   └── delete_student.png
+│
 ├── main.py
 ├── student.txt
 ├── README.md
 ├── LICENSE
+├── CHANGELOG.md
+├── requirements.txt
 └── .gitignore
 ```
 
@@ -201,7 +196,7 @@ Clone the repository
 git clone https://github.com/soumith-64/student-management-system-python.git
 ```
 
-Move into the project directory
+Move into the project
 
 ```bash
 cd student-management-system-python
@@ -217,8 +212,8 @@ python main.py
 
 # ⚙️ Usage
 
-```
-Start Application
+```text
+Launch Program
 
 ↓
 
@@ -231,6 +226,10 @@ Perform CRUD Operation
 ↓
 
 Student Database Updated
+
+↓
+
+Exit
 ```
 
 ---
@@ -254,63 +253,82 @@ Example
 # 🔄 Project Workflow
 
 ```text
-            Start
-
-              │
-
-              ▼
-
-        Display Menu
-
-              │
-
-              ▼
-
-      User Selects Option
-
-              │
-
-              ▼
-
-   CRUD Operation Performed
-
-              │
-
-              ▼
-
-      student.txt Updated
-
-              │
-
-              ▼
-
-            End
+              Start
+                 │
+                 ▼
+          Display Menu
+                 │
+                 ▼
+        Select Operation
+                 │
+      ┌──────────┼──────────┐
+      ▼          ▼          ▼
+    Create      Read      Search
+                 │
+                 ▼
+         Update / Delete
+                 │
+                 ▼
+       Rewrite student.txt
+                 │
+                 ▼
+                End
 ```
 
 ---
 
-# 🧠 Skills Demonstrated
+# 🏆 Project Achievements
 
-This project demonstrates knowledge of:
+- ✅ Complete CRUD Application
+- ✅ File Handling Database
+- ✅ Defensive Programming
+- ✅ Duplicate Roll Number Validation
+- ✅ Automatic Grade Calculation
+- ✅ Automatic Status Calculation
+- ✅ Modular Function Design
+- ✅ Git Version Control
+- ✅ GitHub Repository
+
+---
+
+# 💻 Skills Demonstrated
+
+<p align="center">
+
+<img src="https://skillicons.dev/icons?i=python,git,github,vscode"/>
+
+</p>
+
+This project helped strengthen my understanding of:
 
 - Python Programming
 - File Handling
 - CRUD Operations
 - Functions
-- Modular Programming
 - Lists
 - String Manipulation
 - Exception Handling
-- Input Validation
+- Data Validation
 - Defensive Programming
 - Git
 - GitHub
 
 ---
 
+# 📈 Project Progress
+
+```text
+████████████████████████████████████ 100%
+
+✔ Version 1.0 Released
+✔ CRUD Completed
+```
+
+---
+
 # 🚀 Future Improvements
 
-Version 2
+## Version 2
 
 - 📊 Statistics Dashboard
 - 📁 Backup & Restore
@@ -318,31 +336,37 @@ Version 2
 - 🔍 Search by Name
 - 🔍 Search by Department
 
-Version 3
+---
+
+## Version 3
 
 - 🗄 MySQL Database Integration
 - 🔐 Login System
 - 👨‍💼 Admin Panel
 
-Version 4
+---
 
-- 🖥 Tkinter GUI
+## Version 4
 
-Version 5
+- 🖥 Tkinter Desktop Application
+
+---
+
+## Version 5
 
 - 🌐 Flask Web Application
 
 ---
 
-# 📈 Version History
+# 📜 Version History
 
-| Version | Status |
-|----------|--------|
-| v0.1 | ✅ Add Student |
-| v0.2 | ✅ View Students |
-| v0.3 | ✅ Search Student |
-| v0.4 | ✅ Update Student |
-| v0.5 | ✅ Delete Student |
+| Version | Description |
+|----------|-------------|
+| v0.1 | Add Student |
+| v0.2 | View Students |
+| v0.3 | Search Student |
+| v0.4 | Update Student |
+| v0.5 | Delete Student |
 | **v1.0** | 🎉 CRUD Completed |
 
 ---
@@ -351,9 +375,9 @@ Version 5
 
 ## Soumith J.V.
 
-**Software Developer | Python Enthusiast**
+**Software Developer • Python Enthusiast**
 
-GitHub
+GitHub:
 
 **https://github.com/soumith-64**
 
@@ -361,13 +385,13 @@ GitHub
 
 # 📜 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
 
 ---
 
 <div align="center">
 
-## ⭐ Support
+## 🌟 Support
 
 If you found this project useful,
 
@@ -378,5 +402,7 @@ It motivates me to build more projects.
 ---
 
 ### 🚀 Happy Coding!
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:4F46E5,100:06B6D4"/>
 
 </div>
