@@ -2,7 +2,7 @@ import random
 from time import sleep
 import os
 def display_menu():
-    opt={1,2,3,4,5,6}
+    opt={1,2,3,4,5,6,7}
     choice=0
     while True:
         print()
@@ -13,7 +13,8 @@ def display_menu():
         print("To Search Student press - 3")
         print("To Update Student press - 4")
         print("To Delete Student press - 5")
-        print("To Exit press - 6")
+        print("To open Dashboard press - 6")
+        print("To Exit press - 7")
         try:
             print("")
             choice=int(input("Enter you choice : "))
@@ -35,6 +36,8 @@ def display_menu():
                     update_students()
             elif choice==5:
                 delete_students()
+            elif choice==6:
+                statistics_dashboard()
             else:
                 print("Thanks for using me, Let me manage your students again")
                 print("Saving DATA and Closing Application")
@@ -411,5 +414,74 @@ def delete_students():
                 else:
                     print("Delete Window Closed, Try again ")
 
-                    
+
+def statistics_dashboard():
+
+    with open("student.txt","r") as dash:
+        total_students = passed_students = failed_students = average_sum = highest_average = class_avg = pass_percentage = fail_percentage = 0
+        lowest_average = float("inf")
+        topper_name = ""
+        lines=dash.readlines()
+        for line in lines:
+            line = line.strip()
+            if not line.strip():
+                continue
+
+            data=line.strip().split("|")
+
+            if len(data) != 11:
+                continue
+
+            rollnum, name, age, dept, pymark, mathmark, engmark, total, avg_str, grade, status = data
+
+            avg=float(avg_str)
+            total_students+=1
+
+            if status == "Pass":
+                passed_students+=1
+
+            elif status == "Fail":
+                failed_students+=1
+
+            average_sum+=avg
+
+            if avg > highest_average:
+                highest_average = avg
+                topper_name = name
+
+            if avg < lowest_average:
+                lowest_average = avg
+        if total_students > 0:
+            class_avg=round(average_sum/total_students,2)
+            pass_percentage=round((passed_students/total_students)*100,2)
+            fail_percentage=round((failed_students/total_students)*100,2)
+        else:
+            print("Sorry no Student present, try adding student")
+            return
+
+        print("Getting Data.....\n")
+        sleep(.6)
+        
+        print("\n")
+        print("════════════════════════════════════════════════════════════════")
+        print("                      Statistics Dashboard                      ")
+        print("════════════════════════════════════════════════════════════════\n")
+
+        print("👨 Total Students : ",total_students,"\n")
+        print("✅ Passed Students : ",passed_students,"\n")
+        print("❌ Failed Students : ",failed_students,"\n")
+        print(f"📈 Pass Percentage : ",pass_percentage,"% \n")
+        print(f"📉 Fail Percentage : ",fail_percentage,"% \n")
+        print("🏆 Highest Average : ",highest_average,"\n")
+        print("🥇 Topper : ",topper_name,"\n")
+        print("📉 Lowest Average :",lowest_average,"\n")
+        print("📊 Class Average",class_avg,"\n")
+    
+
+    print("════════════════════════════════════════════════════════════════\n")
+
+
+
+            
+
 display_menu()
