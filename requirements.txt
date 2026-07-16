@@ -1,0 +1,7 @@
+# Student Management System
+
+# This project uses only Python's standard library.
+
+# No external packages are required.
+
+Python >= 3.10
