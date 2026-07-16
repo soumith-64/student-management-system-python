@@ -1,8 +1,10 @@
 import random
 from time import sleep
 import os
+import shutil
+from datetime import datetime
 def display_menu():
-    opt={1,2,3,4,5,6,7}
+    opt={1,2,3,4,5,6,7,8,9}
     choice=0
     while True:
         print()
@@ -14,7 +16,9 @@ def display_menu():
         print("To Update Student press - 4")
         print("To Delete Student press - 5")
         print("To open Dashboard press - 6")
-        print("To Exit press - 7")
+        print("To Backup Database press - 7")
+        print("To Restore Backup  press - 8")
+        print("To Exit press - 9")
         try:
             print("")
             choice=int(input("Enter you choice : "))
@@ -38,6 +42,10 @@ def display_menu():
                 delete_students()
             elif choice==6:
                 statistics_dashboard()
+            elif choice==7:
+                backup_db()
+            elif choice==8:
+                restore_backup_db()
             else:
                 print("Thanks for using me, Let me manage your students again")
                 print("Saving DATA and Closing Application")
@@ -481,6 +489,93 @@ def statistics_dashboard():
     print("════════════════════════════════════════════════════════════════\n")
 
 
+def backup_db():
+    now=datetime.now()
+    dt=now.strftime("%Y-%m-%d_%H%M%S")
+    source="student.txt"
+    bkup_name=f"backup_{dt}.txt"
+    backup_path=os.path.join("Backup",bkup_name)
+    if os.path.exists(source):
+
+        os.makedirs("Backup",exist_ok=True)
+        shutil.copy2(source,backup_path)
+        print("Creating backup...")
+        sleep(0.8)
+
+        print("════════════════════════════════════")
+
+        print("Database Backup Successful ✅")
+
+        print()
+
+        print(f"Saved As : {bkup_name}")
+
+        print()
+
+        print("════════════════════════════════════\n")
+    else:
+        print(f"Error: Could not find the source file '{source}'.")
+
+def restore_backup_db():
+
+    if not os.path.exists("Backup"):
+        print("No backup folder found.")
+        return
+    else:
+
+        dirs=os.listdir("Backup")
+        if len(dirs) == 0:
+            print("No backups available.")
+            return
+        else:
+            source=""
+            for i in range(len(dirs)):
+                print((i+1),dirs[i],"\n")
+            try:
+                inp=int(input("Enter the backup number to restore : "))
+            except ValueError:
+                print("Sorry enter only valid value")
+                return
+            if inp<1 or inp>len(dirs):
+                print("enter a valid File number\n")
+            else:
+                opt={'y','n'}
+                print("Are you sure then press y else n \n")
+                intrest=input("Your opt : " ).lower() 
+                if intrest in opt:
+
+                    if intrest =='y':
+                        source=str(dirs[inp-1])
+                        full_path=os.path.join("Backup", dirs[inp-1])
+                        shutil.copy2(full_path,"student.txt")
+                    else:
+                        print("Restoration stopped\n")
+                        return
+                else:
+                    print("enter only y or n")
+                    print("Going back....")
+                    sleep(.7)
+
+            print("Restoring backup...\n")
+            print("████████████████\n")
+            print("Completed ✅")
+            sleep(1.5)
+
+            print("════════════════════════════════════")
+
+            print("Backup Restored Successful ✅\n")
+
+            print("Source : ",source)
+
+            print()
+
+            print("Restored To : \n")
+
+            print("student.txt")
+
+            print()
+
+            print("════════════════════════════════════\n")
 
             
 
