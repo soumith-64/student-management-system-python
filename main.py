@@ -1,5 +1,4 @@
 import random
-import fileinput
 from time import sleep
 import os
 def display_menu():
@@ -304,7 +303,7 @@ def update_inp(data):
     print()
     print("To update value type else prese enter\n")
     try:
-        rollnum = int(v) if (v := input(f"Original value is {data[0]} :: Type new value if needed : ").strip()) else data[0]
+        rollnum = data[0]
         name = input(f"Original value is {data[1]} :: Type new value if needed : ").strip() or data[1]
         age = int(v) if (v := input(f"Original value is {data[2]} :: Type new value if needed : ").strip()) else data[2]
         dept = input(f"Original value is {data[3]} :: Type new value if needed : ").strip() or data[3]
@@ -316,13 +315,11 @@ def update_inp(data):
         new_data = [
             str(rollnum), str(name), str(age), str(dept), 
             str(pymark), str(mathmark), str(engmark), 
-            str(total), str(avg), str(calculate_grade(int(avg))), str(calculate_status(pymark, mathmark, engmark))
+            str(total), str(avg), str(calculate_grade(avg)), str(calculate_status(pymark, mathmark, engmark))
         ]  
     except ValueError:
-        print("Sorry try again")
+        print("Age and marks must be numeric. Update cancelled.")
         return
-    for i in range(len(data)):
-        new_data[i]=str(new_data[i])
     return new_data
 
 def update_students():
