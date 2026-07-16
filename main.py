@@ -1,10 +1,10 @@
-import random
+import sys
 from time import sleep
 import os
 import shutil
 from datetime import datetime
 def display_menu():
-    opt={1,2,3,4,5,6,7,8,9}
+    opt={0,1,2,3,4,5,6,7,8,9}
     choice=0
     while True:
         print()
@@ -18,7 +18,8 @@ def display_menu():
         print("To open Dashboard press - 6")
         print("To Backup Database press - 7")
         print("To Restore Backup  press - 8")
-        print("To Exit press - 9")
+        print("To export data in csv press - 9")
+        print("To Exit press - 0")
         try:
             print("")
             choice=int(input("Enter you choice : "))
@@ -46,6 +47,8 @@ def display_menu():
                 backup_db()
             elif choice==8:
                 restore_backup_db()
+            elif choice==9:
+                export_csv()
             else:
                 print("Thanks for using me, Let me manage your students again")
                 print("Saving DATA and Closing Application")
@@ -555,9 +558,17 @@ def restore_backup_db():
                     print("enter only y or n")
                     print("Going back....")
                     sleep(.7)
+            print("Restoring backup: ", end="")
+            bar = ""
 
-            print("Restoring backup...\n")
-            print("████████████████\n")
+            for _ in range(7):
+                bar += "█ "
+                # We print the whole line from the beginning (\r) using a fresh newline block
+                print(f"\rRestoring backup: {bar}", end="", flush=True)
+                sleep(0.2)
+
+            print("\n") # Move to a clean line for your success card
+
             print("Completed ✅")
             sleep(1.5)
 
@@ -577,6 +588,8 @@ def restore_backup_db():
 
             print("════════════════════════════════════\n")
 
-            
+def export_csv():
+    pass
+               
 
 display_menu()
