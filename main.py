@@ -1,8 +1,9 @@
 import random
+import fileinput
 from time import sleep
 import os
 def display_menu():
-    opt=[1,2,3,4,5]
+    opt=[1,2,3,4,5,6]
     choice=0
     while True:
         print()
@@ -11,10 +12,13 @@ def display_menu():
         print("To Add Student press - 1 ")
         print("To View Student press - 2")
         print("To Search Student press - 3")
-        print("To Delete Student press - 4")
-        print("To Exit press - 5")
+        print("To Update Student press - 4")
+        print("To Delete Student press - 5")
+        print("To Exit press - 6")
         try:
+            print("")
             choice=int(input("Enter you choice : "))
+            print()
         except ValueError:
             print("Please enter only number from 1 to 5 as per menue")
             continue
@@ -24,9 +28,13 @@ def display_menu():
                 add_students()
             elif choice==2:
                 view_students()
-            elif choice==3:
-                search_students()
+            elif choice == 3:
+                result = search_students()
+                if result is not None:
+                    display_std(*result) # Passes the whole tuple of data
             elif choice==4:
+                    update_students()
+            elif choice==5:
                 delete_students()
             else:
                 print("Thanks for using me, Let me manage your students again")
@@ -70,7 +78,7 @@ def calculate_total(py_mark,math_mark,eng_mark):
     return total_mark
 
 def calculate_average(total_mark):
-    if total_mark >0 :
+    if total_mark > 0 :
         avg=round(total_mark/3,2)
         return avg
     else:
@@ -89,7 +97,7 @@ def calculate_average(total_mark):
 
 
 
-def calculate_grade(total_mark,avg):
+def calculate_grade(avg):
 
     grade=""
 
@@ -160,7 +168,7 @@ def add_students():
         #here we are calling the avg calculating function and storing the data
         avg=calculate_average(total)
         #here we are calling the grade calculating function and storing the data
-        grd=calculate_grade(total,avg)
+        grd=calculate_grade(avg)
         #here we are calling the status calculating function and storing the data
         status=calculate_status(py_mark,math_mark,eng_mark)
         #here we are calling the save student calculating function and storing the data
@@ -241,13 +249,14 @@ def view_students():
 
 
 def search_students():
-    print("Student Search Dashboard\n")
+
     try:
         roll_num=int(input("Enter the roll number of the student :"))
     except ValueError:
         print("Enter a vaild number only\n")
         print("Enter again")
         sleep(1.2)
+        return None
 
     if os.path.exists("student.txt"):
         with open("student.txt","r") as search_std:
@@ -270,13 +279,15 @@ def search_students():
                     else:
                         print("Skipping the data row...")
                     if int(rollnum) == roll_num:
-                            display_std(rollnum, name, age, dept, pymark, mathmark, engmark, total, avg, grade, status)
                             found=True
                             break
                     
-                if not found:
+                if found:
+                    return rollnum, name, age, dept, pymark, mathmark, engmark, total, avg, grade, status
+                else:
                     print("")
                     print(f"Sorry no student found with this roll number {roll_num}")
+                    return None
             else:
                 print("Sorry there is no data to fetch... \n")
                 sleep(.7)
@@ -286,10 +297,73 @@ def search_students():
                 sleep(.7)
                 print("Rerdirecting............\n")
                 sleep(1.3)
+                return None
 
+def update_inp(data):
 
+    print()
+    print("To update value type else prese enter\n")
+    try:
+        rollnum = int(v) if (v := input(f"Original value is {data[0]} :: Type new value if needed : ").strip()) else data[0]
+        name = input(f"Original value is {data[1]} :: Type new value if needed : ").strip() or data[1]
+        age = int(v) if (v := input(f"Original value is {data[2]} :: Type new value if needed : ").strip()) else data[2]
+        dept = input(f"Original value is {data[3]} :: Type new value if needed : ").strip() or data[3]
+        pymark = int(v) if (v := input(f"Original value is {data[4]} :: Type new value if needed : ").strip()) else data[4]
+        mathmark = int(v) if (v := input(f"Original value is {data[5]} :: Type new value if needed : ").strip()) else data[5]
+        engmark = int(v) if (v := input(f"Original value is {data[6]} :: Type new value if needed : ").strip()) else data[6]
+        total=calculate_total(pymark, mathmark, engmark)
+        avg=calculate_average(int(total))
+        new_data = [
+            str(rollnum), str(name), str(age), str(dept), 
+            str(pymark), str(mathmark), str(engmark), 
+            str(total), str(avg), str(calculate_grade(int(avg))), str(calculate_status(pymark, mathmark, engmark))
+        ]  
+    except ValueError:
+        print("Sorry try again")
+        return
+    for i in range(len(data)):
+        new_data[i]=str(new_data[i])
+    return new_data
+
+def update_students():
+    try:
+        rollnum=int(input("Enter the roll number : "))
+    except ValueError:
+        print("Only enter roll number")
+        print("Try again..........")
+        sleep(1.2)
+        return
+
+    if not os.path.exists("student.txt"):
+        print("Data file 'student.txt' not found. 😔")
+        return
+    with open("student.txt","r") as val_std:
+        f=False
+        lines=val_std.readlines()
+        updated_line=[]
+        for line in lines:
+            if not line.strip():
+                updated_line.append(line)
+                print("Sorry empty line found 😔 ")
+                continue
+            data=line.strip().split("|")
+            if int(data[0])==rollnum:
+                datas=update_inp(data)
+                updated_line.append("|".join(datas)+"\n")
+                f=True
+            else:
+                updated_line.append(line)
+    if f:
+        with open("student.txt","w") as updt_std:
+            for value in updated_line:
+                updt_std.write(value)
+        print()
+        print("Value updated sucessfully 👍")
+    else:
+        print("Sorry no data 😔")
+     
 
 def delete_students():
-    print("Comming soon")
+    print("Comming soon 😶")
 
 display_menu()
