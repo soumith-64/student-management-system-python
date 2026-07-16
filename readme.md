@@ -1,769 +1,579 @@
 <div align="center">
 
-# 🎓 Student Management System
-
-### 🚀 A Professional Python-Based Student Management Application
-
-<p align="center">
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3500&pause=1000&color=00BFFF&center=true&vCenter=true&width=900&lines=Student+Management+System;Python+Portfolio+Project;CRUD+%7C+Dashboard+%7C+Backup+%7C+Restore+%7C+CSV;Built+by+Soumith+J.V."/>
-
-</p>
-
-<p align="center">
-
-<img src="https://img.shields.io/badge/Python-3.13-blue?style=for-the-badge&logo=python">
-
-<img src="https://img.shields.io/badge/Version-v1.0-success?style=for-the-badge">
-
-<img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge">
-
-<img src="https://img.shields.io/badge/Status-Stable-brightgreen?style=for-the-badge">
-
-<img src="https://img.shields.io/github/stars/soumith-64/student-management-system-python?style=for-the-badge">
-
-<img src="https://img.shields.io/github/forks/soumith-64/student-management-system-python?style=for-the-badge">
-
-<img src="https://img.shields.io/github/last-commit/soumith-64/student-management-system-python?style=for-the-badge">
-
-</p>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00F5FF,50:8A2BE2,100:FF00FF&height=260&section=header&text=STUDENT%20MANAGEMENT%20SYSTEM&fontSize=45&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=Terminal%20Edition%20v1.0&descAlignY=55"/>
 
 </div>
 
 ---
 
-# 📖 About The Project
+<div align="center">
 
-Student Management System is a **feature-rich command-line application** developed in **Python** to demonstrate practical software engineering concepts.
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=24&duration=2500&pause=900&color=00F5FF&center=true&vCenter=true&width=950&lines=%5B+SYSTEM+BOOTING+%5D;%5B+Loading+Python+Runtime...+%5D;%5B+Loading+Student+Database...+%5D;%5B+Loading+Analytics+Engine...+%5D;%5B+Loading+Backup+Module...+%5D;%5B+Loading+Restore+Engine...+%5D;%5B+Loading+CSV+Exporter...+%5D;%5B+ACCESS+GRANTED+%5D"/>
 
-Rather than focusing only on Python syntax, this project was built to simulate the development of a real software application using incremental feature development, Git version control, documentation, and clean coding practices.
-
-The application supports complete **CRUD (Create, Read, Update, Delete)** operations while providing additional features such as analytics, backup & restore, and CSV export.
+</div>
 
 ---
 
-# ✨ Features
+<div align="center">
 
-## 👨‍🎓 Student Management
+![](https://img.shields.io/badge/SYSTEM-ONLINE-00F5FF?style=for-the-badge)
 
-- ➕ Add Student
-- 📋 View Students
-- 🔍 Search Student
-- ✏️ Update Student
-- ❌ Delete Student
+![](https://img.shields.io/badge/DATABASE-CONNECTED-8A2BE2?style=for-the-badge)
 
----
+![](https://img.shields.io/badge/SECURITY-ACTIVE-FF00FF?style=for-the-badge)
 
-## 📊 Statistics Dashboard
+![](https://img.shields.io/badge/STATUS-STABLE-39FF14?style=for-the-badge)
 
-- Total Students
-- Passed Students
-- Failed Students
-- Highest Average
-- Lowest Average
-- Class Average
-- Pass Percentage
-- Fail Percentage
-- Topper Information
+![](https://img.shields.io/badge/PYTHON-3.13-FFD43B?style=for-the-badge&logo=python)
+
+![](https://img.shields.io/badge/GIT-VERSIONED-F05032?style=for-the-badge&logo=git)
+
+![](https://img.shields.io/badge/LICENSE-MIT-00F5FF?style=for-the-badge)
+
+</div>
 
 ---
 
-## 💾 Backup System
-
-- Automatic Backup Creation
-- Timestamp Based Backup
-- Backup Validation
-
----
-
-## ♻ Restore System
-
-- Restore Previous Backups
-- Backup Selection
-- Restore Confirmation
-- Safe Database Recovery
-
----
-
-## 📄 CSV Export
-
-- Export Student Records
-- Microsoft Excel Compatible
-- Google Sheets Compatible
-- LibreOffice Compatible
-
----
-
-## 🛡 Validation
-
-- Duplicate Roll Number Detection
-- Numeric Input Validation
-- Empty Database Validation
-- File Existence Checking
-- Safe Restore Validation
-
----
-
-# 🛠 Tech Stack
-
-| Technology | Purpose |
-|------------|---------|
-| Python 3 | Programming Language |
-| File Handling | Data Storage |
-| CSV Module | CSV Export |
-| datetime | Timestamp Generation |
-| shutil | Backup & Restore |
-| os | File Management |
-| Git | Version Control |
-| GitHub | Repository Hosting |
-
----
-
-# 🎯 Learning Objectives
-
-This project was developed to strengthen practical knowledge in:
-
-- Python Programming
-- Functions
-- Modular Programming
-- File Handling
-- Exception Handling
-- Software Engineering
-- Git & GitHub
-- Software Documentation
-
----
-
-# 📸 Application Preview
-
-## 🏠 Main Menu
-
-![Menu](screenshots/menu.png)
-
----
-
-## ➕ Add Student
-
-![Add Student](screenshots/add_student.png)
-
----
-
-## 🔍 Search Student
-
-![Search Student](screenshots/search_student.png)
-
----
-
-## ✏️ Update Student
-
-![Update Student](screenshots/update_student.png)
-
----
-
-## ❌ Delete Student
-
-![Delete Student](screenshots/delete_student.png)
-
----
-
-# ⭐ Highlights
-
-✔ Feature-by-feature development
-
-✔ Professional Git history
-
-✔ Stable Release (v1.0)
-
-✔ MIT License
-
-✔ Complete Documentation
-
-✔ Portfolio Project
-
-✔ Beginner-Friendly
-
-✔ Open Source
-
----
-
-> ⭐ If you like this project, consider giving it a **Star** on GitHub.
-
----
----
-
-# 📂 Project Structure
+# > INITIALIZING...
 
 ```text
-student-management-system-python/
-│
-├── 📁 Backup/
-│   ├── backup_2026-07-15_184512.txt
-│   ├── backup_2026-07-16_091245.txt
-│   └── backup_2026-07-17_205311.txt
-│
-├── 📁 screenshots/
-│   ├── menu.png
-│   ├── add_student.png
-│   ├── search_student.png
-│   ├── update_student.png
-│   └── delete_student.png
-│
-├── 📄 CHANGELOG.md
-├── 📄 LICENSE
-├── 📄 README.md
-├── 📄 requirements.txt
-├── 🐍 imports_lib.py
-├── 🐍 main.py
-├── 📄 student.txt
-├── 📄 student.csv
-└── 📄 .gitignore
+██████████████████████████████████████████████
+
+ SYSTEM NAME
+
+ STUDENT MANAGEMENT SYSTEM
+
+ TERMINAL EDITION
+
+ VERSION
+
+ v1.0.0
+
+ DEVELOPER
+
+ Soumith J.V.
+
+ STATUS
+
+ ONLINE
+
+ DATABASE
+
+ CONNECTED
+
+ ACCESS LEVEL
+
+ ADMINISTRATOR
+
+██████████████████████████████████████████████
 ```
 
 ---
 
-# ⚙️ Installation
+# > ABOUT
 
-## 1️⃣ Clone the Repository
+```text
+╔══════════════════════════════════════════════╗
 
-```bash
-git clone https://github.com/soumith-64/student-management-system-python.git
+  Student Management System is a futuristic
+
+  command-line application developed in Python.
+
+  It simulates a real student database with
+
+  complete CRUD functionality,
+
+  analytics,
+
+  backup & restore,
+
+  and CSV export.
+
+╚══════════════════════════════════════════════╝
 ```
 
 ---
 
-## 2️⃣ Navigate into the Project
+# > MODULE STATUS
 
-```bash
-cd student-management-system-python
+```text
+[████████████████████] CRUD ENGINE
+
+STATUS
+
+ONLINE
+
+──────────────────────────────
+
+[████████████████████] DASHBOARD
+
+STATUS
+
+ONLINE
+
+──────────────────────────────
+
+[████████████████████] BACKUP
+
+STATUS
+
+ONLINE
+
+──────────────────────────────
+
+[████████████████████] RESTORE
+
+STATUS
+
+ONLINE
+
+──────────────────────────────
+
+[████████████████████] CSV EXPORT
+
+STATUS
+
+ONLINE
 ```
 
 ---
 
-## 3️⃣ Run the Application
+# > TERMINAL
 
 ```bash
+C:\Users\Soumith>
+
 python main.py
+
+------------------------------------
+
+Student Management System
+
+Version 1.0
+
+Initializing...
+
+Loading Modules...
+
+Loading Database...
+
+Loading Dashboard...
+
+Loading Backup Module...
+
+Loading CSV Module...
+
+READY.
 ```
 
 ---
 
-# 📋 Requirements
-
-- Python 3.10 or higher
-- Windows / Linux / macOS
-- Git (Optional)
-
----
-
-# 🚀 Application Workflow
+# > FEATURES
 
 ```text
-Start Program
-      │
-      ▼
-Display Main Menu
-      │
-      ▼
-User Selects Feature
-      │
-      ▼
-Input Validation
-      │
-      ▼
-Execute Operation
-      │
-      ▼
-Save Changes
-      │
-      ▼
-Return to Main Menu
+╔══════════════════════════════╗
+
+     SYSTEM MODULES
+
+╚══════════════════════════════╝
+
+[✓] Add Student
+
+[✓] View Student
+
+[✓] Search Student
+
+[✓] Update Student
+
+[✓] Delete Student
+
+[✓] Dashboard
+
+[✓] Backup
+
+[✓] Restore
+
+[✓] CSV Export
 ```
 
 ---
 
-# 🏗️ Software Architecture
+<div align="center">
+
+## ⚡ ACCESS LEVEL
 
 ```text
-                    Student Management System
+██████████████████████████████████
 
-                               │
+ACCESS GRANTED
 
-     ┌─────────────────────────┼─────────────────────────┐
+WELCOME ADMINISTRATOR
 
-     ▼                         ▼                         ▼
+```
 
- CRUD Operations         Dashboard Module          Backup Module
+</div>
 
-     │                         │                         │
+---
+---
 
-     ▼                         ▼                         ▼
+# > SYSTEM ARCHITECTURE
 
-Student Records         Statistics Engine        Backup Manager
+```text
+═══════════════════════════════════════════════════════════════════════
 
-     │                         │                         │
+                    CYBERNETIC SYSTEM MAP
 
-     └─────────────────────────┼─────────────────────────┘
+═══════════════════════════════════════════════════════════════════════
 
-                               ▼
+                        USER TERMINAL
 
-                         student.txt
+                             │
 
-                               │
+                             ▼
 
-               ┌───────────────┴───────────────┐
+                    AUTHENTICATION LAYER
 
-               ▼                               ▼
+                             │
 
-        Restore Module                  CSV Export
+                             ▼
+
+                   STUDENT MANAGEMENT CORE
+
+         ┌──────────────┬──────────────┬──────────────┐
+
+         ▼              ▼              ▼
+
+     CRUD ENGINE   ANALYTICS AI   FILE ENGINE
+
+         │              │              │
+
+         └──────┬───────┴───────┬──────┘
+
+                ▼               ▼
+
+          STUDENT DATABASE   BACKUP SERVER
+
+                │
+
+        ┌───────┴────────┐
+
+        ▼                ▼
+
+   CSV EXPORTER      RESTORE ENGINE
+
+═══════════════════════════════════════════════════════════════════════
 ```
 
 ---
 
-# 🔄 Feature Flow
-
-## ➕ Add Student
+# > CORE MODULES
 
 ```text
-User Input
+╔════════════════════════════════════════════════════════════╗
 
-↓
+ MODULE
 
-Validate Input
+ Student Registration
 
-↓
+ STATUS
 
-Calculate Total
+ ████████████████████ ONLINE
 
-↓
+══════════════════════════════════════════════════════════════
 
-Calculate Average
+ MODULE
 
-↓
+ Search Engine
 
-Calculate Grade
+ STATUS
 
-↓
+ ████████████████████ ONLINE
 
-Calculate Status
+══════════════════════════════════════════════════════════════
 
-↓
+ MODULE
 
-Save Student
+ Update Engine
 
-↓
+ STATUS
 
-Success
+ ████████████████████ ONLINE
+
+══════════════════════════════════════════════════════════════
+
+ MODULE
+
+ Delete Engine
+
+ STATUS
+
+ ████████████████████ ONLINE
+
+══════════════════════════════════════════════════════════════
+
+ MODULE
+
+ Dashboard AI
+
+ STATUS
+
+ ████████████████████ ONLINE
+
+══════════════════════════════════════════════════════════════
+
+ MODULE
+
+ Backup Server
+
+ STATUS
+
+ ████████████████████ ONLINE
+
+══════════════════════════════════════════════════════════════
+
+ MODULE
+
+ Restore Engine
+
+ STATUS
+
+ ████████████████████ ONLINE
+
+══════════════════════════════════════════════════════════════
+
+ MODULE
+
+ CSV Exporter
+
+ STATUS
+
+ ████████████████████ ONLINE
+
+╚════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-## 🔍 Search Student
+# > DATABASE STATUS
 
 ```text
-Enter Roll Number
+╔════════════════════════════════════════════╗
 
-↓
+ DATABASE
 
-Read Database
+ student.txt
 
-↓
+ STATUS
 
-Compare Roll Number
+ CONNECTED
 
-↓
+ RECORD FORMAT
 
-Student Found?
+ PIPE DELIMITED
 
-↓
+ BACKUP
 
-YES → Display Student
+ ENABLED
 
-NO  → Student Not Found
+ EXPORT
+
+ ENABLED
+
+ HEALTH
+
+ ██████████████████████
+
+ 100%
+
+╚════════════════════════════════════════════╝
 ```
 
 ---
 
-## ✏️ Update Student
+# > EXECUTION PIPELINE
 
 ```text
-Search Student
+BOOT
 
-↓
+ │
 
-Student Found
+ ▼
 
-↓
+INITIALIZE
 
-Enter New Details
+ │
 
-↓
+ ▼
 
-Recalculate Marks
+LOAD DATABASE
 
-↓
+ │
 
-Rewrite Database
+ ▼
 
-↓
+VERIFY DATA
 
-Success
+ │
+
+ ▼
+
+LOAD MODULES
+
+ │
+
+ ▼
+
+SYSTEM READY
+
+ │
+
+ ▼
+
+WAITING FOR USER COMMAND
 ```
 
 ---
 
-## ❌ Delete Student
+# > COMMAND INTERFACE
 
-```text
-Search Student
+```bash
+C:\Users\Soumith>
 
-↓
+help
 
-Student Found
+══════════════════════════════
 
-↓
+Available Commands
 
-Confirmation
+1 -> Add Student
 
-↓
+2 -> View Students
 
-Delete Record
+3 -> Search Student
 
-↓
+4 -> Update Student
 
-Save File
+5 -> Delete Student
 
-↓
+6 -> Dashboard
 
-Success
+7 -> Backup
+
+8 -> Restore
+
+9 -> CSV Export
+
+10 -> Exit
+
+══════════════════════════════
 ```
 
 ---
 
-## 📊 Statistics Dashboard
+# > PROCESS MONITOR
 
 ```text
-Read Database
+Loading Student Records...
 
-↓
+█████████████████████████████████
 
-Count Students
+100%
 
-↓
+Loading Dashboard...
 
-Calculate Pass / Fail
+█████████████████████████████████
 
-↓
+100%
 
-Highest Average
+Loading Backup Server...
 
-↓
+█████████████████████████████████
 
-Lowest Average
+100%
 
-↓
+Loading Restore Engine...
 
-Class Average
+█████████████████████████████████
 
-↓
+100%
 
-Display Dashboard
+Loading CSV Module...
+
+█████████████████████████████████
+
+100%
+
+SYSTEM READY
 ```
 
 ---
 
-## 💾 Backup System
+# > SOFTWARE CAPABILITIES
 
 ```text
-Check Database
+╔══════════════════════════════════════╗
 
-↓
+CRUD OPERATIONS
 
-Generate Timestamp
+████████████████████ 100%
 
-↓
+FILE HANDLING
 
-Create Backup Folder
+████████████████████ 100%
 
-↓
+DATA VALIDATION
 
-Copy Database
+████████████████████ 100%
 
-↓
+BACKUP ENGINE
 
-Backup Complete
+████████████████████ 100%
+
+CSV EXPORT
+
+████████████████████ 100%
+
+ERROR HANDLING
+
+███████████████████░ 95%
+
+DOCUMENTATION
+
+████████████████████ 100%
+
+╚══════════════════════════════════════╝
 ```
 
 ---
 
-## ♻️ Restore System
+# > PROJECT EVOLUTION
 
 ```text
-List Backups
+[BOOT]
 
 ↓
 
-Select Backup
+Student Registration
 
 ↓
 
-Confirmation
+CRUD Engine
 
 ↓
 
-Restore Database
+Analytics Module
 
 ↓
 
-Completed
-```
-
----
-
-## 📄 CSV Export
-
-```text
-Read student.txt
+Backup Engine
 
 ↓
 
-Split Records
+Restore Engine
 
 ↓
 
-Create Header
-
-↓
-
-Generate CSV
-
-↓
-
-student.csv Created
-```
-
----
-
-# 📝 Student Record Format
-
-Every student record is stored in the following format:
-
-```text
-Roll Number
-
-↓
-
-Name
-
-↓
-
-Age
-
-↓
-
-Department
-
-↓
-
-Python Marks
-
-↓
-
-Math Marks
-
-↓
-
-English Marks
-
-↓
-
-Total
-
-↓
-
-Average
-
-↓
-
-Grade
-
-↓
-
-Status
-```
-
-Example:
-
-```text
-101|Soumith|18|CSE|95|91|89|275|91.67|A+|Pass
-```
-
----
-
-# 🔒 Data Validation
-
-The application safely validates:
-
-- ✅ Duplicate Roll Numbers
-- ✅ Invalid Menu Choices
-- ✅ Invalid Numeric Inputs
-- ✅ Empty Database Files
-- ✅ Missing Backup Folder
-- ✅ Invalid Restore Selection
-- ✅ Missing Database
-- ✅ CSV Export Validation
-
----
-
-# 📊 Software Metrics
-
-| Metric | Value |
-|---------|------:|
-| Programming Language | Python |
-| Release Version | v1.0.0 |
-| Total Features | 9 |
-| Git Commits | 17+ |
-| Documentation | Complete |
-| License | MIT |
-
----
-
-# 💡 Design Philosophy
-
-This project follows a simple philosophy:
-
-> **Build software one feature at a time.**
-
-Instead of creating everything at once, every feature was planned, implemented, tested, committed, and documented separately.
-
-This approach simulates how real software projects evolve over time.
-
----
----
-
-# 🛣 Development Roadmap
-
-This project was intentionally developed in multiple phases to simulate a real-world software development lifecycle.
-
-| Phase | Feature | Status |
-|:------:|---------|:------:|
-| 1 | Student Registration | ✅ |
-| 2 | View Students | ✅ |
-| 3 | Search Student | ✅ |
-| 4 | Update Student | ✅ |
-| 5 | Delete Student | ✅ |
-| 6 | Statistics Dashboard | ✅ |
-| 7 | Backup Database | ✅ |
-| 8 | Restore Database | ✅ |
-| 9 | CSV Export | ✅ |
-| 🚀 | Stable Release v1.0 | ✅ |
-
----
-
-# 📅 Version History
-
-## 🚀 Version 1.0.0
-
-Current Stable Release
-
-### Included Features
-
-- Complete CRUD System
-- Dashboard Analytics
-- Backup Database
-- Restore Database
-- CSV Export
-- Professional Documentation
-- GitHub Release
-- MIT License
-
----
-
-## 🔮 Upcoming Version 2.0
-
-The next major release will migrate the application from **text-file storage** to a **SQLite database**.
-
-### Planned Features
-
-- SQLite Database
-- SQL Queries
-- Faster Searching
-- Better Performance
-- Cleaner Project Structure
-
----
-
-## 🖥 Planned Version 3.0
-
-- Tkinter Desktop GUI
-- Better User Experience
-- Interactive Forms
-- Enhanced Interface
-
----
-
-## 🌐 Planned Version 4.0
-
-- Flask Web Application
-- Authentication System
-- User Roles
-- REST API
-- Browser Access
-
----
-
-# 🏆 Achievements
-
-This repository demonstrates practical experience with:
-
-- ✅ Python Programming
-- ✅ Modular Functions
-- ✅ File Handling
-- ✅ CRUD Operations
-- ✅ Statistics & Analytics
-- ✅ CSV Processing
-- ✅ Backup & Restore
-- ✅ Defensive Programming
-- ✅ Git Version Control
-- ✅ GitHub Workflow
-- ✅ Software Documentation
-
----
-
-# 📚 Learning Outcomes
-
-Building this project helped me improve my understanding of:
-
-- Software Development Workflow
-- Writing Maintainable Code
-- Input Validation
-- Project Documentation
-- Version Control
-- Incremental Feature Development
-- Debugging
-- Problem Solving
-
----
-
-# 📊 Development Process
-
-```text
-Idea
-
-↓
-
-Planning
-
-↓
-
-Design
-
-↓
-
-Implementation
-
-↓
-
-Testing
+CSV Export
 
 ↓
 
@@ -771,342 +581,841 @@ Documentation
 
 ↓
 
-Version Control
+Release v1.0
 
 ↓
 
-Release
-
-↓
-
-Continuous Improvement
+SYSTEM STABLE
 ```
 
 ---
 
-# 💼 Portfolio Value
+# > SECURITY CHECK
 
-This project demonstrates knowledge of:
+```text
+Scanning Files...
 
-| Skill | Demonstrated |
-|--------|:------------:|
-| Python Programming | ✅ |
-| Software Design | ✅ |
-| File Handling | ✅ |
-| Git & GitHub | ✅ |
-| Documentation | ✅ |
-| Debugging | ✅ |
-| Problem Solving | ✅ |
+██████████████████████████
 
----
+100%
 
-# 📈 GitHub Statistics
+Checking Student Database...
 
-> Automatically updated by GitHub.
+██████████████████████████
 
-<p align="center">
+100%
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=soumith-64&show_icons=true&hide_border=true"/>
+Checking Backup Integrity...
 
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=soumith-64&layout=compact&hide_border=true"/>
+██████████████████████████
 
-</p>
+100%
 
----
+Checking CSV Module...
 
-# 🔥 GitHub Contribution Streak
+██████████████████████████
 
-<p align="center">
+100%
 
-<img src="https://streak-stats.demolab.com?user=soumith-64&hide_border=true"/>
+NO ERRORS DETECTED
 
-</p>
+SYSTEM SECURE
+```
 
 ---
-
-# 🏅 GitHub Trophy Showcase
-
-<p align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=soumith-64&theme=flat&no-frame=true&margin-w=15"/>
-
-</p>
-
----
-
-# 👀 Repository Visitors
-
-<p align="center">
-
-<img src="https://komarev.com/ghpvc/?username=soumith-64&style=for-the-badge"/>
-
-</p>
-
----
-
-# 🚀 Future Improvements
-
-The project will continue evolving with the following planned features.
-
-## Version 2
-
-- SQLite Database
-- Database Normalization
-- Improved Search Performance
-
----
-
-## Version 3
-
-- Object-Oriented Programming
-- Better Code Organization
-- Tkinter GUI
-
----
-
-## Version 4
-
-- Flask
-- Login Authentication
-- Multi-user Support
-- REST API
-
----
-
-## Version 5
-
-- Docker
-- Cloud Deployment
-- Unit Testing
-- CI/CD Pipeline
-
----
-
-# ⭐ Why This Project?
-
-This repository represents my learning journey while studying Python and software engineering.
-
-Instead of building isolated examples, I focused on developing one complete application feature by feature, following proper version control and documentation practices.
-
-My goal was to create a project that reflects not only programming ability but also project organization and continuous improvement.
-
----
----
-
-# 👨‍💻 About the Developer
 
 <div align="center">
 
-## Soumith J.V.
+## 🌌 TERMINAL STATUS
 
-### Python Developer | Software Engineering Student | Open Source Learner
+```text
+═══════════════════════════════════════
 
-Passionate about building practical software projects while continuously learning modern software engineering practices.
+ SYSTEM ONLINE
 
-Currently focused on Python, databases, backend development, and open-source technologies.
+ DATABASE ONLINE
+
+ ANALYTICS ONLINE
+
+ BACKUP ONLINE
+
+ RESTORE ONLINE
+
+ CSV EXPORT ONLINE
+
+ READY FOR OPERATION
+
+═══════════════════════════════════════
+```
 
 </div>
 
 ---
-
-# 🎯 Current Learning
-
-I enjoy learning by **building complete software projects** instead of solving isolated coding problems.
-
-Currently learning:
-
-- Python
-- Object-Oriented Programming
-- SQLite
-- Git & GitHub
-- Software Engineering
-- Flask
-- REST APIs
-- Data Structures & Algorithms
-
 ---
 
-# 💻 Technical Skills
+# > NETWORK STATUS
 
-## Languages
+```text
+═══════════════════════════════════════════════════════════════════════
 
-- Python
+ NETWORK INTERFACE
 
----
+ STATUS        : ONLINE
 
-## Core Concepts
+ LATENCY       : 02 ms
 
-- Functions
-- File Handling
-- Exception Handling
-- CRUD Operations
-- Modular Programming
-- Input Validation
-- CSV Processing
-- Backup & Restore
+ DATABASE LINK : STABLE
 
----
+ BACKUP SERVER : CONNECTED
 
-## Development Tools
+ CSV ENGINE    : READY
 
-- Visual Studio Code
-- Git
-- GitHub
-- Windows Terminal
-
----
-
-# 🤝 Contributing
-
-Contributions are welcome.
-
-If you would like to improve this project:
-
-1. Fork the repository
-
-2. Create a feature branch
-
-```bash
-git checkout -b feature/new-feature
+═══════════════════════════════════════════════════════════════════════
 ```
 
-3. Commit your changes
+---
 
-```bash
-git commit -m "feat: add amazing feature"
+# > AI CORE
+
+```text
+╔══════════════════════════════════════════════════════╗
+
+ ARTIFICIAL INTELLIGENCE MODULE
+
+ STATUS
+
+ ONLINE
+
+──────────────────────────────────────────────────────
+
+Student Records
+
+██████████████████████
+
+100%
+
+Analytics
+
+██████████████████████
+
+100%
+
+Data Validation
+
+██████████████████████
+
+100%
+
+Backup Prediction
+
+██████████████████████
+
+100%
+
+CSV Generator
+
+██████████████████████
+
+100%
+
+╚══════════════════════════════════════════════════════╝
 ```
 
-4. Push your branch
+---
 
-```bash
-git push origin feature/new-feature
+# > DEVELOPER SKILL MATRIX
+
+```text
+╔══════════════════════════════════════════════════════╗
+
+PYTHON
+
+██████████████████████████████
+
+100%
+
+──────────────────────────────────────────────────────
+
+GIT
+
+█████████████████████████░░░░░
+
+85%
+
+──────────────────────────────────────────────────────
+
+SQLITE
+
+██████████░░░░░░░░░░░░░░░░░░░░
+
+35%
+
+──────────────────────────────────────────────────────
+
+FLASK
+
+██████░░░░░░░░░░░░░░░░░░░░░░░░
+
+20%
+
+──────────────────────────────────────────────────────
+
+SOFTWARE ENGINEERING
+
+██████████████████████░░░░░░░░
+
+75%
+
+──────────────────────────────────────────────────────
+
+OPEN SOURCE
+
+████████████████░░░░░░░░░░░░░░
+
+60%
+
+╚══════════════════════════════════════════════════════╝
 ```
 
-5. Open a Pull Request
+---
+
+# > GITHUB TERMINAL
+
+```bash
+C:\GitHub\Projects>
+
+git status
+
+On branch main
+
+Your branch is up to date with origin/main.
+
+nothing to commit,
+
+working tree clean
+
+────────────────────────────────────
+
+git tag
+
+v1.0.0
+
+────────────────────────────────────
+
+git log --oneline
+
+release: student management system v1.0
+
+feat: add csv export
+
+feat: add restore system
+
+feat: add backup system
+
+feat: statistics dashboard
+
+feat: update student
+
+feat: delete student
+
+feat: search student
+
+feat: add student
+
+initial commit
+```
 
 ---
 
-# 🐞 Reporting Issues
+# > PROJECT PROGRESS
 
-Found a bug?
+```text
+╔══════════════════════════════════════╗
 
-Please open an Issue with:
+Student Registration
 
-- Bug Description
-- Steps to Reproduce
-- Expected Behaviour
-- Screenshots (if applicable)
+████████████████████
 
-Every suggestion helps improve the project.
+100%
+
+CRUD Engine
+
+████████████████████
+
+100%
+
+Dashboard
+
+████████████████████
+
+100%
+
+Backup
+
+████████████████████
+
+100%
+
+Restore
+
+████████████████████
+
+100%
+
+CSV Export
+
+████████████████████
+
+100%
+
+Documentation
+
+████████████████████
+
+100%
+
+Version 1.0
+
+████████████████████
+
+RELEASED
+
+╚══════════════════════════════════════╝
+```
 
 ---
 
-# ⭐ Support
+# > LIVE SYSTEM MONITOR
 
-If you found this project useful,
+```text
+CPU
 
-please consider:
+██████░░░░░░░░░░░
 
-⭐ Starring the repository
+32%
 
-🍴 Forking the project
+──────────────────────────────
 
-📢 Sharing it with others
+MEMORY
 
-Your support motivates me to continue building high-quality open-source projects.
+█████████░░░░░░░
+
+48%
+
+──────────────────────────────
+
+DATABASE
+
+████████████████
+
+100%
+
+──────────────────────────────
+
+SYSTEM HEALTH
+
+████████████████
+
+100%
+
+──────────────────────────────
+
+UPTIME
+
+24 DAYS
+```
 
 ---
 
-# 📬 Connect With Me
+# > GITHUB DASHBOARD
+
+<p align="center">
+
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=soumith-64&show_icons=true&theme=tokyonight&hide_border=true"/>
+
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=soumith-64&layout=compact&theme=tokyonight&hide_border=true"/>
+
+</p>
+
+---
+
+<p align="center">
+
+<img src="https://streak-stats.demolab.com?user=soumith-64&theme=tokyonight&hide_border=true"/>
+
+</p>
+
+---
+
+# > CONTRIBUTION MATRIX
+
+<p align="center">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=soumith-64&theme=tokyonight"/>
+
+</p>
+
+---
+
+# > TROPHY ROOM
+
+<p align="center">
+
+<img src="https://github-profile-trophy.vercel.app/?username=soumith-64&theme=tokyonight&no-frame=true&margin-w=15"/>
+
+</p>
+
+---
+
+# > VISITOR SCANNER
+
+<p align="center">
+
+<img src="https://komarev.com/ghpvc/?username=soumith-64&style=for-the-badge&color=blueviolet"/>
+
+</p>
+
+---
+
+# > CONTRIBUTION SNAKE
+
+> Enable this later using GitHub Actions.
+
+<p align="center">
+
+<img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg"/>
+
+</p>
+
+---
+
+# > FUTURE MISSIONS
+
+```text
+MISSION 01
+
+████████████████████
+
+COMPLETE
+
+Student Management v1
+
+──────────────────────────────
+
+MISSION 02
+
+██████░░░░░░░░░░░░░░
+
+IN PROGRESS
+
+SQLite Database
+
+──────────────────────────────
+
+MISSION 03
+
+██░░░░░░░░░░░░░░░░░░
+
+LOCKED
+
+Tkinter GUI
+
+──────────────────────────────
+
+MISSION 04
+
+░░░░░░░░░░░░░░░░░░░░
+
+LOCKED
+
+Flask Web Version
+
+──────────────────────────────
+
+MISSION 05
+
+░░░░░░░░░░░░░░░░░░░░
+
+LOCKED
+
+Cloud Deployment
+```
+
+---
+
+<div align="center">
+
+# ⚡ SYSTEM MESSAGE
+
+```text
+NO CRITICAL ERRORS DETECTED
+
+SYSTEM PERFORMANCE
+
+OPTIMAL
+
+READY FOR NEXT MISSION
+```
+
+</div>
+
+---
+---
+
+# > DEVELOPER IDENTITY
+
+```text
+╔══════════════════════════════════════════════════════════════╗
+
+        DEVELOPER PROFILE
+
+──────────────────────────────────────────────────────────────
+
+NAME
+
+Soumith J.V.
+
+ROLE
+
+Python Developer
+
+Software Engineering Student
+
+Open Source Learner
+
+CURRENT MISSION
+
+Build Professional Software
+
+STATUS
+
+ONLINE
+
+ACCESS LEVEL
+
+ADMINISTRATOR
+
+CLEARANCE
+
+LEVEL 10
+
+MISSION STATUS
+
+ACTIVE
+
+═══════════════════════════════════════════════════════════════
+```
+
+---
+
+# > CONNECT
 
 <div align="center">
 
 <a href="https://github.com/soumith-64">
-<img src="https://img.shields.io/badge/GitHub-soumith--64-181717?style=for-the-badge&logo=github">
+
+<img src="https://img.shields.io/badge/GitHub-ENTER_TERMINAL-00F5FF?style=for-the-badge&logo=github&logoColor=black">
+
 </a>
 
 <a href="https://www.linkedin.com/in/soumith-j-v-56042b407/">
-<img src="https://img.shields.io/badge/LinkedIn-Soumith_J.V.-0A66C2?style=for-the-badge&logo=linkedin">
+
+<img src="https://img.shields.io/badge/LinkedIn-CONNECT-8A2BE2?style=for-the-badge&logo=linkedin">
+
 </a>
 
 </div>
 
 ---
 
-# 📜 License
+# > CURRENT OBJECTIVES
 
-This project is licensed under the **MIT License**.
+```text
+╔════════════════════════════════════╗
 
-See the [LICENSE](LICENSE) file for more information.
+MISSION
+
+Student Management v2
+
+STATUS
+
+IN PROGRESS
+
+────────────────────────────────────
+
+NEXT TARGET
+
+SQLite Database
+
+────────────────────────────────────
+
+UPCOMING
+
+Tkinter
+
+────────────────────────────────────
+
+FUTURE
+
+Flask
+
+────────────────────────────────────
+
+ULTIMATE TARGET
+
+Full Stack Developer
+
+╚════════════════════════════════════╝
+```
 
 ---
 
-# 🙏 Acknowledgements
+# > TERMINAL LOG
 
-This project was made possible thanks to:
+```bash
+C:\SYSTEM>
 
-- Python Community
-- GitHub
-- Open Source Contributors
-- Everyone who shares programming knowledge
+whoami
+
+Soumith J.V.
+
+------------------------------------
+
+C:\SYSTEM>
+
+python --version
+
+Python 3.13
+
+------------------------------------
+
+C:\SYSTEM>
+
+git tag
+
+v1.0.0
+
+------------------------------------
+
+C:\SYSTEM>
+
+git status
+
+Working tree clean
+
+------------------------------------
+
+C:\SYSTEM>
+
+mission
+
+Student Management v2
+
+STATUS
+
+Preparing...
+
+------------------------------------
+
+READY
+```
 
 ---
 
-# 📌 Repository Status
+# > SYSTEM ACHIEVEMENTS
 
-| Category | Status |
-|----------|:------:|
-| Version | ✅ v1.0.0 |
-| Documentation | ✅ Complete |
-| Stable Release | ✅ |
-| Open Source | ✅ |
-| License | ✅ MIT |
+```text
+MISSION
+
+CRUD SYSTEM
+
+████████████████████
+
+COMPLETE
+
+──────────────────────────────
+
+MISSION
+
+STATISTICS
+
+████████████████████
+
+COMPLETE
+
+──────────────────────────────
+
+MISSION
+
+BACKUP ENGINE
+
+████████████████████
+
+COMPLETE
+
+──────────────────────────────
+
+MISSION
+
+RESTORE ENGINE
+
+████████████████████
+
+COMPLETE
+
+──────────────────────────────
+
+MISSION
+
+CSV EXPORT
+
+████████████████████
+
+COMPLETE
+
+──────────────────────────────
+
+MISSION
+
+VERSION 1.0
+
+████████████████████
+
+DEPLOYED
+```
 
 ---
 
-# 🚀 Next Version
+# > LICENSE
 
-## Student Management System v2.0
+```text
+OPEN SOURCE
 
-The next release will include:
+LICENSE
 
-- 🗄 SQLite Database
-- 🏗 Better Project Structure
-- ⚡ Faster CRUD Operations
-- 🧩 Object-Oriented Programming
-- 📊 Better Reports
-- 🖥 Tkinter GUI
+MIT
+
+PERMISSION
+
+GRANTED
+
+COPY
+
+MODIFY
+
+DISTRIBUTE
+
+USE
+
+RESPONSIBLY
+```
+
+---
+
+# > FINAL SYSTEM REPORT
+
+```text
+═══════════════════════════════════════════════
+
+PROJECT
+
+Student Management System
+
+VERSION
+
+1.0
+
+STATUS
+
+SUCCESSFULLY DEPLOYED
+
+DATABASE
+
+ONLINE
+
+MODULES
+
+ONLINE
+
+SECURITY
+
+ACTIVE
+
+SYSTEM HEALTH
+
+100%
+
+NEXT UPGRADE
+
+SQLite Edition
+
+═══════════════════════════════════════════════
+```
+
+---
+
+# > SHUTDOWN SEQUENCE
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=22&duration=2500&pause=800&color=00F5FF&center=true&vCenter=true&width=950&lines=Saving+Session...;Synchronizing+Repository...;Uploading+Commits...;Creating+Version+Tag...;Mission+Completed.;Thank+You+For+Visiting."/>
+
+</div>
 
 ---
 
 <div align="center">
 
-# 🌟 Thank You for Visiting!
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF00FF,50:8A2BE2,100:00F5FF&height=180&section=footer&text=MISSION%20COMPLETE&fontColor=ffffff&fontSize=35&animation=twinkling"/>
 
-If you enjoyed exploring this project,
-
-please consider giving it a ⭐ on GitHub.
+</div>
 
 ---
 
-## Built with ❤️ using Python
+<div align="center">
 
-### Developed by
+# ⚡ END OF TRANSMISSION
+
+```text
+████████████████████████████████████
+
+MISSION STATUS
+
+SUCCESS
+
+────────────────────────────────────
+
+THANK YOU
+
+FOR VISITING
+
+────────────────────────────────────
+
+NEXT MISSION
+
+Student Management System
+
+SQLite Edition
+
+────────────────────────────────────
+
+GOODBYE
+
+DEVELOPER
+
+████████████████████████████████████
+```
+
+---
+
+## 🌌 "Code. Learn. Build. Repeat."
+
+### 🚀 Developed by
 
 # Soumith J.V.
 
 ### Python Developer • Software Engineering Student • Open Source Learner
 
----
-
-*"Every expert was once a beginner who kept building."*
-
----
-
-**Student Management System**
-
-**Version 1.0.0**
-
-© 2026 Soumith J.V.
+⭐ **See you in Version 2.0**
 
 </div>
