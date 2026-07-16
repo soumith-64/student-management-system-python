@@ -1,8 +1,4 @@
-import sys
-from time import sleep
-import os
-import shutil
-from datetime import datetime
+from imports_lib import *
 def display_menu():
     opt={0,1,2,3,4,5,6,7,8,9}
     choice=0
@@ -589,7 +585,57 @@ def restore_backup_db():
             print("════════════════════════════════════\n")
 
 def export_csv():
-    pass
+
+    if os.path.exists("student.txt"):
+
+        with open("student.txt","r") as file:
+            lines=file.readlines()
+        
+        if lines:
+
+            with open(
+                        "student.csv",
+                        "w",
+                        newline="",
+                        encoding="utf-8"
+                    ) as csv_file:
+                writer=csv.writer(csv_file)
+                writer.writerow(["Roll Number","Name","Age","Department","Python","Math","English","Total","Average","Grade","Status"])
+                for line in lines:
+
+                    if not line.strip():
+                        continue
+
+                    data=line.strip().split("|")
+                    writer.writerow(data)
+            bar = ""
+
+            for _ in range(7):
+                        bar += "█ "
+                        # We print the whole line from the beginning (\r) using a fresh newline block
+                        print(f"\rPreparing CSV File: {bar}", end="", flush=True)
+                        sleep(0.2)
+
+            print("\n") # Move to a clean line for your success card
+
+            print("Completed ✅")
+            sleep(1.5)
+
+            print("════════════════════════════════════")
+
+            print("CSV file Successful Created ✅\n")
+
+            print("📄 Exported File : student.csv")
+
+            print()
+
+            print("════════════════════════════════════\n")
+
+        else:
+            print("No data in file")
+
+    else:
+        print("Sorry Source file does not exist")
                
 
 display_menu()
